@@ -3,6 +3,7 @@ package test;
 import main.DeepThought;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayInputStream;
@@ -30,6 +31,7 @@ class DeepThoughtIntegrationTest {
     }
 
     @Test
+    @DisplayName("when the task is asking a question that does not exist expect the answer to life")
     void testAskQuestion() {
         String input = "1\nWhat is the meaning of life?\n3\n";
         ByteArrayInputStream in = new ByteArrayInputStream(input.getBytes());
@@ -53,6 +55,7 @@ class DeepThoughtIntegrationTest {
     }
 
     @Test
+    @DisplayName("when the task is adding a question expected to be added and answered")
     void testAddQuestion() {
         String input = "2\nWhat is the capital of France? \"Paris\"\n1\nWhat is the capital of France?\n3\n";
         ByteArrayInputStream in = new ByteArrayInputStream(input.getBytes());
@@ -79,6 +82,7 @@ class DeepThoughtIntegrationTest {
     }
 
     @Test
+    @DisplayName("when the choice of task is invalid expect to write a warning and ask again to choose")
     void testInvalidChoice() {
         String input = "5\n3\n";
         ByteArrayInputStream in = new ByteArrayInputStream(input.getBytes());
