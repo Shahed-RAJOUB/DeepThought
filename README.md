@@ -20,7 +20,7 @@ DeepThought is a simple Java program that allows users to ask questions and rece
 
 ### Prerequisites
 
-- Java Development Kit (JDK) 8 or higher installed on your system
+- Java Development Kit (JDK) 22
 - A Java IDE (like IntelliJ IDEA, Eclipse) or a text editor and command line interface
 
 ### Steps
@@ -73,15 +73,17 @@ To run the tests for this program, you'll need JUnit 5 in your classpath. You ca
 
 ## Notes
 
-- The program runs in an infinite loop. To exit, you'll need to terminate the program manually (e.g., by pressing Ctrl+C in the terminal).
+- The program runs in an infinite loop. To exit, you'll need to terminate the program manually .
 - Questions are case-sensitive and must end with a question mark when adding them to the knowledge base.
 - The maximum length for questions and answers is 255 characters.
+- The complexity to check if a key exists is O(1)which is fast enough and due to using HashMap. a well-designed hash function distributes keys uniformly across the buckets, allowing for constant time complexity for lookups.
+  It does not provide any order for elements and could consume more memory space.
 
 ## Future Improvements
 
-- Add a feature to save and load the knowledge base from a file
+- Add a feature to save and load the knowledge base from a Database
 - Implement a more sophisticated matching algorithm for questions
-- Add an option to exit the program gracefully
+- Add an option to exit the program gracefully. It was not mentioned in the requirements but something like press 3 to exit.
 - Implement a web interface for easier interaction
 
 Feel free to contribute to this project by submitting pull requests or reporting issues!
