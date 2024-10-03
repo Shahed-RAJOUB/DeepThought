@@ -27,16 +27,16 @@ DeepThought is a simple Java program that allows users to ask questions and rece
 
 1. Clone or download the repository to your local machine.
 
-2. Open a terminal or command prompt and navigate to the directory containing the Java files.
+2. Open a terminal or command prompt and navigate to the src directory containing the Java files.
 
 3. Compile the Java files:
    ```
-   javac DeepThought.java QuestionProcessorService.java
+   javac -cp . main/*.java
    ```
 
 4. Run the program:
    ```
-   java DeepThought
+   java -cp . main/DeepThought
    ```
 
 5. Follow the on-screen prompts to interact with the program:
